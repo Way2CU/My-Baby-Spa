@@ -5,3 +5,136 @@
  * Copyright (c) 2017. by Way2CU, http://way2cu.com
  * Authors: Iliya Melishev
  */
+
+section.header {
+	background-image: url(../images/header.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	min-height: 1000px;
+	text-align: center;
+}
+
+section.header h1 {
+	color: white;
+	margin: 0;
+	padding-top: 120px;
+	font-size: 2.5rem;
+	font-weight: 400;
+}
+
+section.header p {
+	color: white;
+	font-size: 1.8rem;
+	margin: 0;
+	padding-top: 0.5em;
+}
+
+section.header a.contact_form {
+	display: inline-block;
+	margin-top: 50px;
+	text-decoration: none;
+	color: white;
+	border: 2px solid @color_green;
+	padding: 0.5em 1em;
+	border-radius: 10px;
+	border-bottom-right-radius: 0px;
+	border-top-left-radius: 0px;
+	transition: all 0.3s;
+
+	&:hover {
+		background-color: @color_green;
+	}
+}
+
+/*
+ * Section Babys
+*/
+
+section.babys {
+	padding: 0 calc(~'(100% - 960px)' / 2);
+	text-align: center;
+}
+
+section.babys article {
+	padding-top: 150px;
+}
+
+section.babys article p,
+section.babys article h2 {
+	margin: 0;
+}
+
+section.babys article:nth-of-type(1) {
+	color: @color_pink;
+}
+
+section.babys article:nth-of-type(2) {
+	color: @color_blue;
+}
+section.babys article:nth-of-type(3) {
+	color: @color_purple;
+}
+
+section.babys article p {
+	padding-top: 1em;
+}
+
+section.babys article p img {
+	padding-top: 2em;
+}
+
+
+/*
+** Section Gallery
+*/
+
+section.gallery {
+	text-align: center;
+}
+
+section.gallery div.gallery_header {
+	padding: 1em calc(~'(100% - 960px)' / 2);
+	box-sizing: border-box;
+	background-color: @color_black;
+	color: white;
+}
+
+section.gallery div.gallery_header article h1:after,
+section.gallery div.gallery_header article h1:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	border-top: 2px solid white;
+	background-color: transparent;
+	border-bottom: 2px solid white;
+	height: 10px;
+	width: 200px;
+	margin: 0 1em;
+}
+
+section.gallery div.gallery_header a {
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	border: 2px solid @color_green;
+	margin: 1em 0;
+	padding: 0.5em 1em;
+	border-radius: 10px;
+	border-bottom-right-radius: 0px;
+	border-top-left-radius: 0px;
+	transition: all 0.3s;
+
+	&:hover {
+		background-color: @color_green;
+	}
+}
+
+section.gallery div.gallery_home a {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+	height: 25vh;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+}
