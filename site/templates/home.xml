@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
-	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="site_title"/></title>
@@ -9,7 +8,104 @@
 		</head>
 
 		<body>
-			<h1>It works!</h1>
+			<!-- Generic desktop header -->
+			<cms:desktop>
+				<cms:template file="stock/header_generic.xml">
+					<param name="fixed" value=""/>
+					<param name="menu" value="parts/menu_items.xml"/>
+					<param name="logo" value="logo.svg"/>
+					<param name="phone" value="phone"/>
+					<param name="phone_sprite_icon" value="icon-phone"/>
+					<param name="sprite" value="site-sprite.svg"/>
+				</cms:template>
+			</cms:desktop>
+
+			<!-- Section  -->
+			<section class="header">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="header_main"
+					group="home_page"
+					template="stock/article_generic.xml"
+					>
+					<param name="title_tag" value="h1"/>
+					<param name="title" value=""/>
+				</cms:module>
+
+				<a href="#contact_form" class="contact_form">
+					<cms:text constant="start_now" />
+				</a>
+			</section>
+
+			<!-- Section babys -->
+			<section class="babys">
+				<!-- Babys swim -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="babys_swim"
+					group="home_page"
+					template="stock/article_generic.xml"
+					>
+					<param name="title_tag" value="h2"/>
+					<param name="title" value=""/>
+				</cms:module>
+
+				<!-- When babys swim -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="when_babys_swim"
+					group="home_page"
+					template="stock/article_generic.xml"
+					>
+					<param name="title_tag" value="h2"/>
+					<param name="title" value=""/>
+				</cms:module>
+
+				<!-- Benefits babys swim -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="benefits_babys_swim"
+					group="home_page"
+					template="stock/article_generic.xml"
+					>
+					<param name="title_tag" value="h2"/>
+					<param name="title" value=""/>
+				</cms:module>
+			</section>
+
+			<!-- Section Gallery -->
+			<section class="gallery">
+				<div class="gallery_header">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="gallery_header"
+						group="home_page"
+						>
+					<param name="title_tag" value="h1"/>
+					<param name="title" value=""/>
+					</cms:module>
+
+					<!-- Gallery link -->
+					<a href="URL::make(array(), 'gallery.xml')" cms:eval="href">
+						<cms:text constant="gallery_images" />
+					</a>
+				</div>
+
+				<!-- Gallery list -->
+				<div class="gallery_home">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="gallery"
+						template="parts/home_page_gallery.xml"
+						/>
+				</div>
+			</section>
 		</body>
 	</html>
 </document>
