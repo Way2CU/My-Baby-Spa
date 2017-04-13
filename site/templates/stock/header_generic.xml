@@ -74,7 +74,7 @@
 		<cms:if condition="isset($template['phone'])">
 			<a
 				class="phone"
-				href="'tel:'.urlencode(Language::getText($template['phone']))"
+				href="'tel:'.urlencode(Language::get_text($template['phone']))"
 				cms:eval="href"
 				>
 				<cms:if condition="isset($template['phone_sprite_icon'])">
