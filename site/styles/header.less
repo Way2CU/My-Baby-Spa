@@ -1,0 +1,97 @@
+/**
+ * Header Style Sheet
+ * Mai Baby Spa
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Iliya Melishev
+ */
+
+header {
+	padding: 0.5em calc(~'(100% - 960px)' / 2 );
+	text-align: center;
+	border-bottom: 2px dashed fade(white, 30%);;
+	background-color: transparent;
+	z-index: 100000;
+}
+
+header.active {
+	background-color: white;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+header nav  {
+	display: inline-block;
+	vertical-align: middle;
+	width: 70%;
+}
+
+header nav a {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 1em 2em;
+	color: white;
+	text-decoration: none;
+	transition: all 0.3s;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+header.active nav a {
+	color: @color_aqua;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+header a {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+header a img {
+	display: block;
+	width: 150px;
+}
+
+header nav {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+header a.phone {
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+	text-decoration: none;
+	line-height: 100%;
+	font-size: 1rem;
+	padding: 0.5em;
+	border: 1px solid white;
+	border-radius: 10px;
+	transition: all 0.3s;
+
+	&:hover {
+		background-color: @color_blue_dark;
+		color: white;
+	}
+}
+
+header.active a.phone {
+	color: @color_aqua;
+	border: 1px solid @color_aqua;
+}
+
+header a.phone svg {
+	display: inline-block;
+	vertical-align: middle;
+	width: 1.5rem;
+	height: 1.5rem;
+	fill: white;
+	margin-left: 0.5em;
+}
+
+header.active a.phone svg {
+	fill: @color_aqua;
+}
