@@ -51,6 +51,17 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	Site.header = document.querySelector('header');
+
+	window.addEventListener('scroll', function(){
+		if (window.scrollY === 0) {
+			Site.header.classList.remove('active');
+			console.log(window.scrollY);
+		} else {
+			Site.header.classList.add('active');
+		}
+	});
 };
 
 
