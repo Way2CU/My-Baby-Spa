@@ -1,0 +1,7 @@
+<document>
+	<a href="$params['image']"
+		style="'background-image: url('.$params['image'].');'"
+		cms:eval="style,href"
+		>
+	</a>
+</document>
