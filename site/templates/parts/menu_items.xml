@@ -2,13 +2,20 @@
 	<!-- About us -->
 	<a
 		href="URL::make(array(), 'about_us.xml')"
+		class="URL::is_active('about_us.xml')"
 	 	cms:eval="href"
+	 	cms:optional="class"
 	 	>
 		<cms:text constant="about_us" />
 	</a>
 
 	<!-- Gallery -->
-	<a href="URL::make(array(), 'gallery.xml')" cms:eval="href">
+	<a
+		href="URL::make(array(), 'gallery.xml')"
+		class="URL::is_active('gallery.xml')"
+		cms:eval="href"
+	 	cms:optional="class"
+		>
 		<cms:text constant="gallery" />
 	</a>
 
@@ -18,7 +25,12 @@
 	</a>
 
 	<!-- Contact -->
-	<a href="URL::make(array(), 'contact.xml')" cms:eval="href">
+	<a
+		href="URL::make(array(), 'contact.xml')"
+		class="URL::is_active('contact.xml')"
+		cms:eval="href"
+	 	cms:optional="class"
+		>
 		<cms:text constant="contact" />
 	</a>
 </document>

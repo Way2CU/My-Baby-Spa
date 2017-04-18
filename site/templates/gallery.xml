@@ -28,7 +28,7 @@
 			</cms:desktop>
 
 			<!-- Section Gallery -->
-			<section class="gallery">
+			<section class="gallery_page">
 				<h1><cms:text constant="last_lessons_images"/></h1>
 				<cms:module
 					name="gallery"
