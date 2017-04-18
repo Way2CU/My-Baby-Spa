@@ -1,3 +1,6 @@
 {
-	"/": "home.xml"
+	"/": "home.xml",
+	"/about_us": "about_us.xml",
+	"/gallery": "gallery.xml",
+	"/contact": "contact.xml"
 }
