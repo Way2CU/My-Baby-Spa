@@ -34,9 +34,9 @@
 </symbol>
 <symbol id="icon-menu" viewBox="0 0 32 32">
 <title>menu</title>
-<path fill="#313859" style="fill: var(--color1, #313859)" d="M0 0h32v6.4h-32v-6.4z"></path>
-<path fill="#313859" style="fill: var(--color1, #313859)" d="M0 12.8h32v6.4h-32v-6.4z"></path>
-<path fill="#313859" style="fill: var(--color1, #313859)" d="M0 25.6h32v6.4h-32v-6.4z"></path>
+<path   d="M0 0h32v6.4h-32v-6.4z"></path>
+<path   d="M0 12.8h32v6.4h-32v-6.4z"></path>
+<path   d="M0 25.6h32v6.4h-32v-6.4z"></path>
 </symbol>
 </defs>
 </svg>
