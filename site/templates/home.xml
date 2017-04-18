@@ -8,6 +8,13 @@
 		</head>
 
 		<body>
+			<cms:svg file="site_sprite.svg"/>
+
+			<!-- Floating link -->
+			<a href="#" class="contact_form" id="floating_link">
+				<cms:text constant="start_now" />
+			</a>
+
 			<!-- Generic desktop header -->
 			<cms:desktop>
 				<cms:template file="stock/header_generic.xml">
@@ -16,7 +23,7 @@
 					<param name="logo" value="logo.svg"/>
 					<param name="phone" value="phone"/>
 					<param name="phone_sprite_icon" value="icon-phone"/>
-					<param name="sprite" value="site-sprite.svg"/>
+					<param name="sprite" value="site_sprite.svg"/>
 				</cms:template>
 			</cms:desktop>
 
@@ -80,15 +87,16 @@
 			<!-- Section Gallery -->
 			<section class="gallery">
 				<div class="gallery_header">
+					<h1>
+						<span><cms:text constant="lessons_photos" /></span>
+					</h1>
 					<cms:module
 						name="articles"
 						action="show"
 						text_id="gallery_header"
 						group="home_page"
-						>
-					<param name="title_tag" value="h1"/>
-					<param name="title" value=""/>
-					</cms:module>
+						template="stock/article_generic.xml"
+						/>
 
 					<!-- Gallery link -->
 					<a href="URL::make(array(), 'gallery.xml')" cms:eval="href">
@@ -102,10 +110,89 @@
 						name="gallery"
 						action="show_image_list"
 						group="gallery"
-						template="parts/home_page_gallery.xml"
-						/>
+						template="stock/image_generic.xml"
+						limit="8"
+						>
+						<param name="thumbnail_size" value="400"/>
+						<param name="constrain" value="Thumbnail::CONSTRAIN_BOTH"/>
+					</cms:module>
 				</div>
 			</section>
+
+			<!-- Section videos -->
+			<section class="videos">
+				<h1>
+					<span><cms:text constant="youtube" /></span>
+				</h1>
+				<cms:module
+					name="youtube"
+					action="show"
+					text_id="main"
+					template="parts/youtube.xml"
+					/>
+				<!-- Article next to video -->
+				<cms:module
+					name="articles"
+					action="show"
+					group="home_page"
+					text_id="video_article"
+					template="stock/article_generic.xml"
+					/>
+			</section>
+
+			<!-- Section testemonials -->
+			<section class="customers">
+				<h1>
+					<span><cms:text constant="customers" /></span>
+				</h1>
+				<cms:module
+					name="articles"
+					action="show_list"
+					group="customers_tell"
+					template="parts/customers_tell.xml"
+					/>
+			</section>
+
+			<footer>
+				<a href="#" class="logo">
+					<cms:svg file="logo.svg" />
+				</a>
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="footer_article"
+					group="home_page"
+					template="stock/article_generic.xml"
+					>
+					<param name="title_tag" value="h2"/>
+					<param name="title" value=""/>
+				</cms:module>
+
+				<!-- form link -->
+				<a href="#" class="contact_form">
+					<cms:text constant="start_now" />
+				</a>
+
+				<!-- Phone link -->
+				<a href="'tel:'.urlencode(Language::get_Text('phone'))"
+					cms:eval="href"
+					class="phone"
+					>
+					<!-- Phone text -->
+					<cms:text constant="phone"/>
+					<!-- icon-phone -->
+					<cms:svg file="site_sprite.svg" symbol="icon-phone"/>
+				</a>
+			</footer>
+			<!-- Floating contact form -->
+			<div id="floating_form">
+				<cms:module
+					name="contact_form"
+					action="show"
+					text_id="contact_form"
+					/>
+			</div>
 		</body>
 	</html>
 </document>

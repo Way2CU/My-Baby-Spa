@@ -1,0 +1,8 @@
+<document>
+	<article>
+		<div class="bubble">
+			<cms:markdown param="content" multilanguage="yes" />
+		</div>
+		<h4><cms:var param="title" multilanguage="yes" /></h4>
+	</article>
+</document>

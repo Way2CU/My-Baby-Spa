@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title><cms:text constant="site_title"/></title>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+			<cms:svg file="site_sprite.svg"/>
+
+			<!-- Floating link -->
+			<a href="#" class="contact_form" id="floating_link">
+				<cms:text constant="start_now" />
+			</a>
+
+			<!-- Generic desktop header -->
+			<cms:desktop>
+				<cms:template file="stock/header_generic.xml">
+					<param name="fixed" value=""/>
+					<param name="menu" value="parts/menu_items.xml"/>
+					<param name="logo" value="logo.svg"/>
+					<param name="phone" value="phone"/>
+					<param name="phone_sprite_icon" value="icon-phone"/>
+					<param name="sprite" value="site_sprite.svg"/>
+				</cms:template>
+			</cms:desktop>
+
+			<!-- Section contact -->
+			<section class="contact">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="article_contact"
+					group="contact_page"
+					template="stock/article_generic.xml"
+					/>
+
+				<!-- Contact form link -->
+				<a href="#contact_form" class="contact_form">
+					<cms:text constant="start_now" />
+				</a>
+
+				<!-- Branches article -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="article_contact_branches"
+					group="contact_page"
+					template="stock/article_generic.xml"
+					>
+					<param name="title_tag" value="h2"/>
+					<param name="title" value=""/>
+				</cms:module>
+			</section>
+
+			<footer>
+				<a href="#" class="logo">
+					<cms:svg file="logo.svg" />
+				</a>
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="footer_article"
+					group="home_page"
+					template="stock/article_generic.xml"
+					>
+					<param name="title_tag" value="h2"/>
+					<param name="title" value=""/>
+				</cms:module>
+
+				<!-- form link -->
+				<a href="#" class="contact_form">
+					<cms:text constant="start_now" />
+				</a>
+
+				<!-- Phone link -->
+				<a href="'tel:'.urlencode(Language::get_Text('phone'))"
+					cms:eval="href"
+					class="phone"
+					>
+					<!-- Phone text -->
+					<cms:text constant="phone"/>
+					<!-- icon-phone -->
+					<cms:svg file="site_sprite.svg" symbol="icon-phone"/>
+				</a>
+			</footer>
+			<!-- Floating contact form -->
+			<div id="floating_form">
+				<cms:module
+					name="contact_form"
+					action="show"
+					text_id="contact_form"
+					/>
+			</div>
+		</body>
+	</html>
+</document>

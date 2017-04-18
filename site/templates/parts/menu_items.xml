@@ -13,7 +13,7 @@
 	</a>
 
 	<!-- Blog -->
-	<a href="URL::make(array(), 'blog.xml')" cms:eval="href">
+	<a href="/blog">
 		<cms:text constant="blog" />
 	</a>
 
