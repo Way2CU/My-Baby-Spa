@@ -16,7 +16,6 @@
 			</a>
 
 			<!-- Generic desktop header -->
-			<cms:desktop>
 				<cms:template file="stock/header_generic.xml">
 					<param name="fixed" value=""/>
 					<param name="menu" value="parts/menu_items.xml"/>
@@ -24,8 +23,8 @@
 					<param name="phone" value="phone"/>
 					<param name="phone_sprite_icon" value="icon-phone"/>
 					<param name="sprite" value="site_sprite.svg"/>
+					<param name="mobile_menu_sprite_icon" value="icon-menu"/>
 				</cms:template>
-			</cms:desktop>
 
 			<!-- Section  -->
 			<section class="header">
