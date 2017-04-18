@@ -106,6 +106,13 @@
 					text_id="contact_form"
 					/>
 			</div>
+
+			<!-- Copyright -->
+			<cms:template file="stock/copyright.xml">
+				<param name="holder" value="copyright_holder"/>
+				<param name="text" value="copyright_text"/>
+				<param name="light" value=""/>
+			</cms:template>
 		</body>
 	</html>
 </document>

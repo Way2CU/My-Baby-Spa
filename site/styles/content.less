@@ -341,7 +341,7 @@ div.dialog.active div.content {
 	width: 75%;
 	box-sizing: border-box;
 	padding: 1em;
-	border: 1px solid @color_black;
+	border: 1px solid @color_grey;
 	transition: all 0.3s;
 
 	&:hover,
@@ -578,6 +578,18 @@ footer a.phone svg {
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 0.5em;
+}
+
+/**
+ * Copyright
+*/
+
+div.copyright {
+	background-color: @color_black;
+	color: white;
+	text-align: center;
+
+	background-position: calc(~'(50% - 150px)') center;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
