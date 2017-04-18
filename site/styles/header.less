@@ -33,16 +33,25 @@ header nav a {
 	color: white;
 	text-decoration: none;
 	transition: all 0.3s;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 
 	&:hover {
 		text-decoration: underline;
+	}
+
+	&.active {
+		color: @color_green;
 	}
 }
 
 header.active nav a {
 	color: @color_aqua;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 	&:hover {
 		text-decoration: underline;
+	}
+	&.active {
+		color: @color_green;
 	}
 }
 
@@ -71,6 +80,7 @@ header a.phone {
 	padding: 0.5em;
 	border: 1px solid white;
 	border-radius: 10px;
+	padding-top: 0.7em;
 	transition: all 0.3s;
 
 	&:hover {
@@ -82,6 +92,13 @@ header a.phone {
 header.active a.phone {
 	color: @color_aqua;
 	border: 1px solid @color_aqua;
+
+	&:hover {
+		color: white;
+		svg {
+			fill: white;
+		}
+	}
 }
 
 header a.phone svg {
@@ -91,6 +108,7 @@ header a.phone svg {
 	height: 1.5rem;
 	fill: white;
 	margin-left: 0.5em;
+	transform: translateY(-2px);
 }
 
 header.active a.phone svg {

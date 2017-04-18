@@ -311,55 +311,6 @@ section.customers article h4 {
 	padding-right: 60px;
 }
 
-footer {
-	background-image: url(../images/footer.jpg);
-	background-position: center;
-	background-repeat: no-repeat;
-	min-height: 500px;
-	text-align: center;
-}
-
-footer a.logo {
-	display: inline-block;
-	text-align: center;
-	width: 250px;
-	padding-top: 5%;
-}
-
-footer a.logo svg {
-	height: 100%;
-	width: 100%;
-}
-
-footer article {
-	color: white;
-	padding: 1em 0;
-}
-
-footer article h2 {
-	margin: 0;
-}
-
-footer article p {
-	margin: 0;
-	padding: 1em 0;
-}
-
-footer a.phone,
-footer a.contact_form {
-	.green_style();
-	margin: 1em;
-}
-
-footer a.phone svg {
-	width: 1.2em;
-	height: 1.2em;
-	fill: white;
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 0.5em;
-}
-
 /**
  * Dialog floating form
 */
@@ -506,24 +457,25 @@ section.features article {
 }
 
 /**
- * Section Gallery
+ * Section Gallery_page
 */
 
-section.gallery {
+section.gallery_page {
 	padding: 0 calc(~'(100% - 1200px)' / 2);
 	padding-top: 10%;
+	text-align: center;
 }
 
-section.gallery h1 {
+section.gallery_page h1 {
 	color: @color_blue_dark;
 	font-weight: 400;
 }
 
-section.gallery a {
+section.gallery_page a {
 	display: inline-block;
 	vertical-align: middle;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-	margin: 0.5em;
+	margin: 0.3em;
 	transition: all 0.3s;
 
 	&:hover {
@@ -531,7 +483,7 @@ section.gallery a {
 	}
 }
 
-section.gallery a img {
+section.gallery_page a img {
 	display: block;
 	margin: 0 auto;
 }
@@ -568,4 +520,55 @@ section.contact article h2 {
 section.contact article h2:last-of-type{
 	font-weight: 400;
 	margin: 0;
+}
+
+footer {
+	background-image: url(../images/footer.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 500px;
+	text-align: center;
+}
+
+footer a.logo {
+	display: inline-block;
+	text-align: center;
+	width: 250px;
+	padding-top: 5%;
+
+	filter: drop-shadow(1px 1px 5px white);
+}
+
+footer a.logo svg {
+	height: 100%;
+	width: 100%;
+}
+
+footer article {
+	color: white;
+	padding: 1em 0;
+}
+
+footer article h2 {
+	margin: 0;
+}
+
+footer article p {
+	margin: 0;
+	padding: 1em 0;
+}
+
+footer a.phone,
+footer a.contact_form {
+	.green_style();
+	margin: 1em;
+}
+
+footer a.phone svg {
+	width: 1.2em;
+	height: 1.2em;
+	fill: white;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 0.5em;
 }
