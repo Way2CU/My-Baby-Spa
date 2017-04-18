@@ -3,8 +3,39 @@
  * Mai Baby Spa
  *
  * Copyright (c) 2017. by Way2CU, http://way2cu.com
- * Authors: Iliya Melishev
+ * Authors: Iliya Melishev, Mladen Mijatov
  */
+
+//Sexy link style mixin
+.green_style(@text: white, @background: transparent) {
+	display: inline-block;
+	margin-top: 50px;
+	text-decoration: none;
+	color: @text;
+	border: 2px solid @color_green;
+	padding: 0.5em 1em;
+	border-radius: 10px;
+	border-bottom-right-radius: 0px;
+	border-top-left-radius: 0px;
+	background-color: @background;
+	transition: all 0.3s;
+
+	&:hover {
+		background-color: @color_green;
+		color: white;
+	}
+}
+
+//Floating link
+a#floating_link {
+	.green_style(@color_green, white);
+
+	position: fixed;
+	left: 0;
+	top: 20%;
+	transform: rotate(90deg) translateZ(0);
+	transform-origin: left bottom;
+}
 
 section.header {
 	background-image: url(../images/header.jpg);
@@ -15,48 +46,32 @@ section.header {
 }
 
 section.header h1 {
-	color: white;
 	margin: 0;
 	padding-top: 120px;
+
+	color: white;
 	font-size: 2.5rem;
 	font-weight: 400;
 }
 
 section.header p {
-	color: white;
-	font-size: 1.8rem;
 	margin: 0;
 	padding-top: 0.5em;
+
+	color: white;
+	font-size: 1.8rem;
 }
 
 section.header a.contact_form {
-	display: inline-block;
-	margin-top: 50px;
-	text-decoration: none;
-	color: white;
-	border: 2px solid @color_green;
-	padding: 0.5em 1em;
-	border-radius: 10px;
-	border-bottom-right-radius: 0px;
-	border-top-left-radius: 0px;
-	transition: all 0.3s;
-
-	&:hover {
-		background-color: @color_green;
-	}
+	.green_style();
 }
 
-/*
- * Section Babys
-*/
-
+/**
+ * Section Babies
+ */
 section.babys {
 	padding: 0 calc(~'(100% - 960px)' / 2);
 	text-align: center;
-}
-
-section.babys article {
-	padding-top: 150px;
 }
 
 section.babys article p,
@@ -64,56 +79,138 @@ section.babys article h2 {
 	margin: 0;
 }
 
-section.babys article:nth-of-type(1) {
-	color: @color_pink;
-}
+section.babys article {
+	&:nth-of-type(1) { color: @color_pink; }
+	&:nth-of-type(2) { color: @color_blue; }
+	&:nth-of-type(3) { color: @color_purple; }
 
-section.babys article:nth-of-type(2) {
-	color: @color_blue;
-}
-section.babys article:nth-of-type(3) {
-	color: @color_purple;
-}
+	p img {
+		padding-top: 2em;
+		padding-bottom: 100px;
+	}
 
-section.babys article p {
-	padding-top: 1em;
-}
-
-section.babys article p img {
-	padding-top: 2em;
+	&:nth-of-type(1n + 2) p img {
+		margin-top: 100px;
+	}
 }
 
 
-/*
-** Section Gallery
-*/
-
+/**
+ * Section gallery
+ */
 section.gallery {
 	text-align: center;
 }
 
 section.gallery div.gallery_header {
-	padding: 1em calc(~'(100% - 960px)' / 2);
+	padding: 100px calc(~'(100% - 960px)' / 2);
 	box-sizing: border-box;
 	background-color: @color_black;
 	color: white;
 }
 
-section.gallery div.gallery_header article h1:after,
-section.gallery div.gallery_header article h1:before {
-	content: '';
-	display: inline-block;
-	vertical-align: middle;
-	border-top: 2px solid white;
-	background-color: transparent;
-	border-bottom: 2px solid white;
-	height: 10px;
-	width: 200px;
-	margin: 0 1em;
+section.gallery div.gallery_header h1 {
+	position: relative;
+	z-index: 0;
+
+	color: white;
+	text-align: center;
+	line-height: 1;
+
+	span {
+		background-color: @color_black;
+		padding: 0 1em;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		height: 10px;
+		transform: translateY(-50%);
+
+		border-top: 2px solid white;
+		border-bottom: 2px solid white;
+		background-color: transparent;
+
+		z-index: -1;
+	}
 }
 
 section.gallery div.gallery_header a {
-	color: white;
+	.green_style()
+}
+
+section.gallery div.gallery_home a {
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
+
+	font-size: 0;
+}
+
+section.gallery div.gallery_home a img {
+	width: 100%;
+}
+
+/**
+ * Section youtube
+ */
+section.videos {
+	padding: 100px calc(~'(100% - 960px)' / 2);
+}
+
+section.videos h1 {
+	position: relative;
+	color: @color_red;
+	text-align: center;
+	font-size: 2.5rem;
+	line-height: 1;
+
+	&:before {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 50%;
+		margin: 0 0.5em;
+		height: 10px;
+
+		content: '';
+		border-top: 2px solid @color_grey;
+		border-bottom: 2px solid @color_grey;
+		background-color: transparent;
+
+		transform: translateY(-50%);
+		z-index: -1;
+	}
+
+	span {
+		background-color: white;
+		padding: 0 1em;
+	}
+}
+
+section.videos iframe {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+section.videos article {
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: top;
+	padding-right: 2em;
+	width: 50%;
+
+	p {
+		margin: 0;
+	}
+}
+
+section.videos article a {
+	color: @color_green;
 	text-decoration: none;
 	display: inline-block;
 	border: 2px solid @color_green;
@@ -122,19 +219,353 @@ section.gallery div.gallery_header a {
 	border-radius: 10px;
 	border-bottom-right-radius: 0px;
 	border-top-left-radius: 0px;
+	margin-top: 50px;
+	float: left;
 	transition: all 0.3s;
 
 	&:hover {
 		background-color: @color_green;
+		color: white;
 	}
 }
 
-section.gallery div.gallery_home a {
+/**
+ * Testimonials
+ */
+section.customers {
+	padding: 0 calc(~'(100% - 960px)' / 2);
+	padding-bottom: 100px;
+	text-align: center;
+}
+
+section.customers h1 {
+	color: @color_red;
+	position: relative;
+	line-height: 1;
+
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+
+		border-top: 2px solid @color_grey;
+		background-color: transparent;
+		border-bottom: 2px solid @color_grey;
+		height: 10px;
+		z-index: -1;
+	}
+
+	span {
+		background-color: white;
+		padding: 0 1em;
+	}
+}
+
+section.customers article {
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+	width: 300px;
+	text-align: initial;
+	color: @color_grey;
+}
+
+section.customers article:nth-of-type(2) {
+	margin: 0 30px;
+}
+
+section.customers article div.bubble {
+	box-sizing: border-box;
+	padding: 0 0.5em;
+	border: 1px solid @color_grey;
+	border-radius: 10px;
+	min-height: 250px;
+	position: relative;
+}
+
+section.customers article div.bubble:after {
+	content: '';
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	right: 10px;
+	top: 100%;
+	transform: translate(-50%, -50%) rotate(45deg);
+
+	border: 1px solid @color_grey;
+	border-left-color: transparent;
+	border-top-color: transparent;
+
+	background-color: white;
+	font-size: 0;
+}
+
+section.customers article h4 {
+	font-weight: 400;
+	font-size: 1rem;
+	margin: 0;
+	padding-top: 0.5em;
+	padding-right: 60px;
+}
+
+footer {
+	background-image: url(../images/footer.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 500px;
+	text-align: center;
+}
+
+footer a.logo {
+	display: inline-block;
+	text-align: center;
+	width: 250px;
+	padding-top: 5%;
+}
+
+footer a.logo svg {
+	height: 100%;
+	width: 100%;
+}
+
+footer article {
+	color: white;
+	padding: 1em 0;
+}
+
+footer article h2 {
+	margin: 0;
+}
+
+footer article p {
+	margin: 0;
+	padding: 1em 0;
+}
+
+footer a.phone,
+footer a.contact_form {
+	.green_style();
+	margin: 1em;
+}
+
+footer a.phone svg {
+	width: 1.2em;
+	height: 1.2em;
+	fill: white;
 	display: inline-block;
 	vertical-align: middle;
-	width: 25%;
-	height: 25vh;
+	margin-right: 0.5em;
+}
+
+/**
+ * Dialog floating form
+*/
+
+div.dialog.active div.title {
+	background-color: @color_aqua;
+	text-align: center;
+}
+
+#floating_form form {
+	box-sizing: border-box;
+}
+
+#floating_form form label {
+	display: block;
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+#floating_form form label input {
+	display: inline-block;
+	vertical-align: middle;
+	width: 75%;
+	box-sizing: border-box;
+	padding: 1em;
+	border: 1px solid @color_black;
+	transition: all 0.3s;
+
+	&:hover,
+	&:focus {
+		border: 1px solid @color_green;
+	}
+}
+
+#floating_form form label span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20%;
+	margin-left: 5%;
+	box-sizing: border-box;
+}
+
+#floating_form form label span:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 35px;
+	height: 35px;
+	margin-left: 10%;
+
+	background-image: url(../images/form_sprite.svg);
 	background-repeat: no-repeat;
-	background-size: 100% auto;
-	background-position: center;
+	background-size: 470px 35px;
+}
+
+#floating_form form label:nth-of-type(2) span:before {
+	background-position: -30px center;
+}
+
+#floating_form form div.controls {
+	display: none;
+}
+
+div.dialog div.content div.command_bar a {
+	.green_style(@color_black);
+	margin: 0 0.5em;
+}
+
+/**
+ * Section about
+*/
+
+section.about {
+	background-image: url(../images/about_us.jpg);
+	background-repeat: no-repeat;
+	background-position: center -60px;
+	min-height: 1000px;
+	padding: 0 calc(~'(100% - 1200px)' / 2);
+	padding-top: 100px;
+}
+
+section.about article {
+	margin-left: 50%;
+	margin-top: 5%;
+	background-color: fade(white, 80%);
+	box-sizing: border-box;
+	padding: 1em;
+	border: 2px solid white;
+	border-radius: 6px;
+
+	color: @color_black;
+}
+
+section.about h1 {
+	margin: 0;
+	color: @color_black;
+}
+
+/**
+ * Section features
+*/
+
+section.features {
+	padding: 0 calc(~'(100% - 1200px)' / 2);
+}
+
+section.features h1 {
+	text-align: center;
+	color: @color_blue_dark;
+}
+
+section.features ul {
+	padding: 2em 0;
+	margin: 0;
+}
+
+section.features ul li {
+	display: inline-block;
+	vertical-align: top;
+	list-style: none;
+	width: 20%;
+	box-sizing: border-box;
+	padding: 0 0.5em;
+	text-align: center;
+}
+
+section.features ul li svg {
+	display: block;
+	margin: 0 auto;
+	width: 100px;
+	height: 60px;
+}
+
+// Section features article
+
+section.features article {
+	min-height: 550px;
+	background-image: url(../images/baby_towel.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	box-sizing: border-box;
+	padding-left: 50%;
+	padding-top: 20px;
+}
+
+/**
+ * Section Gallery
+*/
+
+section.gallery {
+	padding: 0 calc(~'(100% - 1200px)' / 2);
+	padding-top: 10%;
+}
+
+section.gallery h1 {
+	color: @color_blue_dark;
+	font-weight: 400;
+}
+
+section.gallery a {
+	display: inline-block;
+	vertical-align: middle;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+	margin: 0.5em;
+	transition: all 0.3s;
+
+	&:hover {
+		transform: translateY(-10px);
+	}
+}
+
+section.gallery a img {
+	display: block;
+	margin: 0 auto;
+}
+
+/**
+ * Section contact
+*/
+
+section.contact {
+	padding: 150px calc(~'(100% - 1200px)' / 2);
+
+	background-image: url(../images/baby_call.jpg);
+	background-position: calc(~'(50% - 300px)') center;
+	background-repeat: no-repeat;
+}
+
+section.contact article {
+	padding-left: 40%;
+}
+
+section.contact article h1 {
+	font-weight: 400;
+	margin: 0;
+}
+
+section.contact a.contact_form {
+	.green_style(@color_green);
+}
+
+section.contact article h2 {
+	color: @color_aqua;
+}
+
+section.contact article h2:last-of-type{
+	font-weight: 400;
+	margin: 0;
 }
