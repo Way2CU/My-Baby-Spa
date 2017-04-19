@@ -1,12 +1,27 @@
 <document>
-	<cms:module
-		name="youtube"
-		action="show"
-		id="$params['id']"
-		embed="1"
-		width="400"
-		height="250"
-		enable_api="1"
-		cms:eval="id"
-		/>
+	<cms:desktop>
+		<cms:module
+			name="youtube"
+			action="show"
+			id="$params['id']"
+			embed="1"
+			width="400"
+			height="250"
+			enable_api="1"
+			cms:eval="id"
+			/>
+	</cms:desktop>
+
+	<cms:mobile>
+		<cms:module
+			name="youtube"
+			action="show"
+			id="$params['id']"
+			embed="1"
+			width="250"
+			height="250"
+			enable_api="1"
+			cms:eval="id"
+			/>
+	</cms:mobile>
 </document>
