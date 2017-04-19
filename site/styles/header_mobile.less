@@ -10,6 +10,7 @@ header.mobile_title {
 	background-color: white;
 	padding: 1em;
 	box-sizing: border-box;
+	text-align: center;
 }
 
 header.stock.generic a {
@@ -18,7 +19,17 @@ header.stock.generic a {
 }
 
 header.stock.generic a.phone {
-	float: left;
+	position: absolute;
+	top: 50%;
+	left: 1em;
+	transform: translateY(-50%);
+}
+
+header.stock.generic a.menu {
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	transform: translateY(-50%);
 }
 
 header.stock.generic a.menu svg,
@@ -27,10 +38,7 @@ header.stock.generic a.phone svg {
 }
 
 header.stock.generic a.logo {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	display: inline-block;
 }
 
 header.stock.generic a img {

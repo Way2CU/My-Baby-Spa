@@ -27,11 +27,454 @@
 }
 
 section.header {
-	margin-top: 100px;
 	background-image: url(../images/mobile_header.jpg);
-	background-position: center top;
+	background-position: center bottom;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	text-align: center;
+	background-color: #1fa5e8;
+	margin-top: 70px;
+	min-height: 500px;
+}
+
+
+//Floating link
+a#floating_link {
+	display: none;
+}
+
+section.header h1 {
+	margin: 0;
+	color: white;
+	font-weight: 400;
+	padding-top: 1.5em;
+}
+
+section.header p {
+	margin: 0;
+	padding-top: 0.5em;
+	color: white;
+}
+
+section.header a.contact_form {
+	.green_style();
+	margin-top: 1em;
+}
+
+/**
+ * Section Babies
+ */
+section.babys {
+	padding: 1em;
+	text-align: center;
+}
+
+section.babys article p,
+section.babys article h2 {
+	margin: 0;
+}
+
+section.babys article {
+	&:nth-of-type(1) { color: @color_pink; }
+	&:nth-of-type(2) { color: @color_blue; }
+	&:nth-of-type(3) { color: @color_purple; }
+	padding: 1em 0;
+}
+
+section.babys article img {
+	display: block;
+	margin: 0 auto;
+	width: 80vw;
+	padding: 1em 0;
+}
+
+/**
+ * Section gallery
+ */
+section.gallery {
+	text-align: center;
+}
+
+section.gallery div.gallery_header {
+	padding: 1em;
+	box-sizing: border-box;
+	background-color: @color_black;
+	color: white;
+}
+
+section.gallery div.gallery_header h1 {
+	position: relative;
+	z-index: 0;
+
+	color: white;
+	text-align: center;
+	line-height: 1;
+
+	span {
+		background-color: transparent;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		width: 70vw;
+		margin: 1em auto;
+		padding: 0.2em 0;
+		border-top: 1px solid white;
+		border-bottom: 1px solid white;
+		background-color: transparent;
+		z-index: -1;
+	}
+}
+
+section.gallery div.gallery_header a {
+	.green_style();
+	margin: 1em 0;
+}
+
+section.gallery div.gallery_home a {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 0;
+	width: 50vw;
+}
+
+section.gallery div.gallery_home a img {
+	width: 100%;
+	outline: 1px solid white;
+}
+
+/**
+ * Section youtube
+ */
+section.videos {
+	padding: 1em;
+}
+
+section.videos h1 {
+	color: @color_red;
+	text-align: center;
+	line-height: 1;
+
+	&:after {
+		content: '';
+		display: block;
+		width: 50vw;
+		margin: 0.5em auto;
+		height: 10px;
+
+		content: '';
+		border-top: 2px solid @color_grey;
+		border-bottom: 2px solid @color_grey;
+		background-color: transparent;
+
+		transform: translateY(-50%);
+		z-index: -1;
+	}
+}
+
+section.videos iframe {
+	display: block;
+	margin: 0 auto;
+}
+
+section.videos article {
+	display: block;
+	margin: 0 auto;
+	padding: 1em 0;
+	p {
+		margin: 0;
+	}
+}
+
+section.videos article a {
+	color: @color_green;
+	text-decoration: none;
+	display: block;
+	width: 50vw;
+	border: 2px solid @color_green;
+	margin: 1em auto;
+	padding: 0.5em 1em;
+	border-radius: 10px;
+	border-bottom-right-radius: 0px;
+	border-top-left-radius: 0px;
+	margin-top: 50px;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+/**
+ * Testimonials
+ */
+section.customers {
+	padding: 1em;
+	text-align: center;
+}
+
+section.customers h1 {
+	color: @color_red;
+	line-height: 1;
+
+	&:after {
+		content: '';
+		display: block;
+		width: 50vw;
+		margin: 1em auto;
+		border-top: 1px solid @color_grey;
+		background-color: transparent;
+		border-bottom: 1px solid @color_grey;
+		height: 10px;
+		z-index: -1;
+	}
+}
+
+section.customers article {
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+	width: 80vw;
+	text-align: initial;
+	color: @color_grey;
+	padding-bottom: 1em;
+}
+
+section.customers article div.bubble {
+	box-sizing: border-box;
+	padding: 0 0.5em;
+	border: 1px solid @color_grey;
+	border-radius: 10px;
+	position: relative;
+}
+
+section.customers article div.bubble:after {
+	content: '';
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	right: 10px;
+	top: 100%;
+	transform: translate(-50%, -50%) rotate(45deg);
+
+	border: 1px solid @color_grey;
+	border-left-color: transparent;
+	border-top-color: transparent;
+
+	background-color: white;
+	font-size: 0;
+}
+
+section.customers article h4 {
+	font-weight: 400;
+	font-size: 1rem;
+	margin: 0;
+	margin-top: 1.5em;
+}
+
+/**
+ * Section about
+*/
+
+section.about {
+	margin-top: 85px;
+	background-image: url(../images/about_us.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+	padding: 0.5em;
 	background-color: @color_blue;
+}
+
+section.about article {
+	background-color: fade(white, 80%);
+	box-sizing: border-box;
+	padding: 1em;
+	border: 2px solid white;
+	border-radius: 6px;
+	margin-top: 70vw;
+	color: @color_black;
+}
+
+section.about h1 {
+	margin: 0;
+	color: @color_black;
+}
+
+/**
+ * Section features
+*/
+
+section.features {
+	padding: 1em;
+}
+
+section.features h1 {
+	text-align: center;
+	color: @color_blue_dark;
+}
+
+section.features ul {
+	padding: 0;
+	margin: 0 auto;
+}
+
+section.features ul li {
+	display: block;
+	list-style: none;
+	width: 80vw;
+	box-sizing: border-box;
+	padding: 0 0.5em;
+	text-align: center;
+	margin: 0 auto;
+}
+
+section.features ul li svg {
+	display: block;
+	margin: 0 auto;
+	width: 100px;
+	height: 60px;
+}
+
+// Section features article
+
+section.features article {
+	padding-top: 2em;
+	min-height: 1000px;
+	background-image: url(../images/baby_towel.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
+/**
+ * Section Gallery_page
+*/
+
+section.gallery_page {
+	padding: 0.5em;
+	padding-top: 70px;
+	text-align: center;
+}
+
+section.gallery_page h1 {
+	color: @color_blue_dark;
+	font-weight: 400;
+}
+
+section.gallery_page a {
+	display: block;
+	margin: 1em auto;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+	width: 80vw;
+}
+
+section.gallery_page a img {
+	display: block;
+	width: 100%;
+}
+
+/**
+ * Section contact
+*/
+section.contact {
+	padding: 0.5em;
+	margin-top: 85px;
+	background-image: url(../images/baby_call.jpg);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	min-height: 950px;
+}
+
+section.contact article h1 {
+	font-weight: 400;
+	margin: 0;
+}
+
+section.contact a.contact_form {
+	.green_style(@color_green);
+	display: block;
+	margin: 1em auto;
+	width: 50vw;
+	text-align: center;
+}
+
+section.contact article h2 {
+	color: @color_aqua;
+}
+
+section.contact article h2:last-of-type{
+	font-weight: 400;
+	margin: 0;
+}
+
+
+/**
+ * Footer
+*/
+
+footer {
+	background-image: url(../images/mobile_footer.jpg);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	height: 700px;
+	text-align: center;
+	background-color: #004f96;
+}
+
+footer a.logo {
+	display: inline-block;
+	text-align: center;
+	width: 70vw;
+	padding-top: 5%;
+	filter: drop-shadow(1px 1px 5px white);
+}
+
+footer a.logo svg {
+	height: 100%;
+	width: 100%;
+}
+
+footer article {
+	color: white;
+	padding: 1em 0;
+}
+
+footer article h2 {
+	margin: 0;
+}
+
+footer article p {
+	margin: 0;
+	padding: 1em 0;
+}
+
+footer a.phone,
+footer a.contact_form {
+	.green_style();
+	margin: 0.5em auto;
+	display: block;
+	width: 50vw;
+	font-size: 1.2em;
+}
+
+footer a.phone svg {
+	width: 1.2em;
+	height: 1.2em;
+	fill: white;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 0.5em;
+}
+
+/**
+ * Copyright
+*/
+
+div.copyright {
+	background-color: @color_black;
+	color: white;
+	text-align: center;
+
+	background-position: calc(~'(50% - 100px)') center;
 }
