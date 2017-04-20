@@ -12,7 +12,7 @@ All of these need to be checked manually, changed and then committed. System wil
 	- [ ] Templates for registering and recovering user password are created and selected;
 	> - [x] PNG images are optimized using `optipng` command;
 	- [x] JPEG images are converted from original PNG and optimized using `guetzli` command;
-	- [ ] SVG images are cleaned and optimized;
+	- [x] SVG images are cleaned and optimized;
 	- [x] Site has favicon specified in different sizes (16, 32, 64);
 	- [x] All active elements of the site have `:hover` and `:focus` styles defined;
 	- [x] Site has copyright;
@@ -25,9 +25,9 @@ All of these need to be checked manually, changed and then committed. System wil
 	> - [x] SMTP credentials are configured and working;
 	- [ ] Default sender email;
 	- [ ] Default recipient;
-	- [ ] Forms have honeypot field;
-	- [ ] Templates for each form are created and assigned to form;
-	- [ ] Templates have subject properly defined;
+	- [x] Forms have honeypot field;
+	- [x] Templates for each form are created and assigned to form;
+	- [x] Templates have subject properly defined;
 	- [ ] Form submits and client/developer receives email.
 - Shop:
 	> - [x] Desired payment method is enabled and configured;
