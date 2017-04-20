@@ -1,11 +1,11 @@
 ---
 site:
-  domain: sample.com
-  # subdomain: test
+  domain: mybabyspa.co.il
+  subdomain: next
   # alias: domain.com
-  root: httpdocs
-  username: sample
-  caracal_branch: master
+  root: next
+  username: mybabyspa
+  caracal_branch: v0.4
   # ip_address: 0.0.0.0
   # owner: Some Person
   # plan: Unlimited
