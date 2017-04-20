@@ -10,8 +10,8 @@ All of these need to be checked manually, changed and then committed. System wil
 	- [x] Site title is properly defined;
 	- [x] No errors or warnings are reported in the log file;
 	- [ ] Templates for registering and recovering user password are created and selected;
-	- [ ] PNG images are optimized using `optipng` command;
-	- [ ] JPEG images are converted from original PNG and optimized using `guetzli` command;
+	> - [x] PNG images are optimized using `optipng` command;
+	- [x] JPEG images are converted from original PNG and optimized using `guetzli` command;
 	- [ ] SVG images are cleaned and optimized;
 	- [x] Site has favicon specified in different sizes (16, 32, 64);
 	- [x] All active elements of the site have `:hover` and `:focus` styles defined;
@@ -21,8 +21,8 @@ All of these need to be checked manually, changed and then committed. System wil
 	- [x] Styles are written to target LTR by default with RTL modifications, even on RTL-only sites.
 - Contact form:
 	- [ ] SendGrid API access is configured;
-	- [ ] Mandrill API access is configured;
-	- [ ] SMTP credentials are configured and working;
+	> - [x] Mandrill API access is configured;
+	> - [x] SMTP credentials are configured and working;
 	- [ ] Default sender email;
 	- [ ] Default recipient;
 	- [ ] Forms have honeypot field;
@@ -30,10 +30,10 @@ All of these need to be checked manually, changed and then committed. System wil
 	- [ ] Templates have subject properly defined;
 	- [ ] Form submits and client/developer receives email.
 - Shop:
-	- [ ] Desired payment method is enabled and configured;
-	- [ ] Default warehouse is created;
-	- [ ] Default currency is selected;
-	- [ ] Contact form template for transaction is created and selected;
-	- [ ] Shop is not in testing mode.
+	> - [x] Desired payment method is enabled and configured;
+	> - [x] Default warehouse is created;
+	> - [x] Default currency is selected;
+	> - [x] Contact form template for transaction is created and selected;
+	> - [x] Shop is not in testing mode.
 - Articles:
 	- [x] Each article has a title even if it's not used;
