@@ -46,7 +46,8 @@ header nav a {
 
 header.active nav a {
 	color: @color_aqua;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	text-shadow: none;
+
 	&:hover {
 		text-decoration: underline;
 	}
@@ -55,14 +56,17 @@ header.active nav a {
 	}
 }
 
-header a {
+header a.logo {
 	display: inline-block;
 	vertical-align: middle;
+	filter: drop-shadow(1px 1px 5px white);
 }
 
 header a img {
 	display: block;
 	width: 150px;
+
+
 }
 
 header nav {
