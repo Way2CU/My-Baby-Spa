@@ -44,9 +44,9 @@
 				</a>
 			</section>
 
-			<!-- Section babys -->
-			<section class="babys">
-				<!-- Babys swim -->
+			<!-- Section babies -->
+			<section class="babies">
+				<!-- Babies swim -->
 				<cms:module
 					name="articles"
 					action="show"
@@ -58,7 +58,7 @@
 					<param name="title" value=""/>
 				</cms:module>
 
-				<!-- When babys swim -->
+				<!-- When babies swim -->
 				<cms:module
 					name="articles"
 					action="show"
@@ -70,7 +70,7 @@
 					<param name="title" value=""/>
 				</cms:module>
 
-				<!-- Benefits babys swim -->
+				<!-- Benefits babies swim -->
 				<cms:module
 					name="articles"
 					action="show"

@@ -70,20 +70,30 @@ section.header a.contact_form {
 /**
  * Section Babies
  */
-section.babys {
+section.babies {
 	padding: 0 calc(~'(100% - 960px)' / 2);
 	text-align: center;
 }
 
-section.babys article p,
-section.babys article h2 {
+section.babies article p,
+section.babies article h2 {
 	margin: 0;
 }
 
-section.babys article {
-	&:nth-of-type(1) { color: @color_pink; }
-	&:nth-of-type(2) { color: @color_blue; }
-	&:nth-of-type(3) { color: @color_purple; }
+section.babies article {
+	&:nth-of-type(1) {
+		color: @color_pink;
+	}
+
+	&:nth-of-type(2) {
+		color: @color_blue;
+		img { clip-path: url(../images/masks.svg#mask1); }
+	}
+
+	&:nth-of-type(3) {
+		color: @color_purple;
+		img { clip-path: url(../images/masks.svg#mask2); }
+	}
 
 	p img {
 		padding-top: 2em;
@@ -314,7 +324,7 @@ section.customers article h4 {
 
 /**
  * Dialog floating form
-*/
+ */
 
 div.dialog.active div.title {
 	background-color: @color_aqua;
@@ -386,7 +396,7 @@ div.dialog div.content div.command_bar a {
 
 /**
  * Section about
-*/
+ */
 
 section.about {
 	background-image: url(../images/about_us.jpg);
@@ -417,7 +427,7 @@ section.about h1 {
 
 /**
  * Section features
-*/
+ */
 
 section.features {
 	padding: 0 calc(~'(100% - 1200px)' / 2);
@@ -464,7 +474,7 @@ section.features article {
 
 /**
  * Section Gallery_page
-*/
+ */
 
 section.gallery_page {
 	padding: 0 calc(~'(100% - 1200px)' / 2);
@@ -496,7 +506,7 @@ section.gallery_page a img {
 
 /**
  * Section contact
-*/
+ */
 
 section.contact {
 	padding: 150px calc(~'(100% - 1200px)' / 2);
@@ -582,7 +592,7 @@ footer a.phone svg {
 
 /**
  * Copyright
-*/
+ */
 
 div.copyright {
 	background-color: @color_black;
@@ -593,7 +603,7 @@ div.copyright {
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-	section.babys {
+	section.babies {
 		padding: 1em;
 	}
 	section.about,
