@@ -9,6 +9,7 @@
 
 		<body>
 			<cms:svg file="site_sprite.svg"/>
+			<cms:svg file="masks.svg"/>
 
 			<!-- Floating link -->
 			<a href="#" class="contact_form" id="floating_link">
