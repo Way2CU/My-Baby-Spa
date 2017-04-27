@@ -1,0 +1,10 @@
+/**
+ * Masking Style Sheet
+ * MyBabySpa
+ *
+ * Copyright (c) 2017. by Way2CU, http://way2cu.com
+ * Authors: Mladen Mijatov
+ */
+
+section.babies article:nth-of-type(2) img { clip-path: url(#mask1); }
+section.babies article:nth-of-type(3) img { clip-path: url(#mask2); }
