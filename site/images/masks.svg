@@ -7,6 +7,7 @@
 	version="1.1"
 	width="0"
 	height="0"
+	style="position: absolute;"
 	>
 	<defs>
 		<clipPath id="mask1" transform="translate(0, -120) scale(0.95)">
